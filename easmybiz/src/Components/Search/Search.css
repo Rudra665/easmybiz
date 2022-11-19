@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+
+}
+
+.search {
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    min-height: 4vh;
+    flex: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-block: 0.3%;
+}
+
+.link {
+    text-decoration: none;
+    color: "grey";
+}
+
+.link:hover {
+    text-decoration: none;
+    color: #4CBB17;
+
+}
