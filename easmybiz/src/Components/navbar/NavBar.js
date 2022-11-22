@@ -1,6 +1,5 @@
 
 import * as React from 'react';
-
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,15 +8,13 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Fade from '@mui/material/Fade';
 import { List, ListItem } from '@mui/material';
 const NavBar = () => {
-    const [Dopen, setDOpen] = React.useState(false)
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -36,9 +33,7 @@ const NavBar = () => {
     const handleClose = () => {
         setAnchorEl(false);
     };
-    const handleOpen = () => {
-        setDOpen(true)
-    }
+
     return (
         <AppBar className='appbar' sx={{ top: 40, position: "absolute" }}>
             <Container maxWidth="lg">
@@ -98,20 +93,8 @@ const NavBar = () => {
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography textAlign="center">About Us</Typography>
                             </MenuItem>
-                            <MenuItem onClick={handleOpenNavMenu}>
-
-                                <Typography>Services</Typography>
-                                <List>
-                                    <ListItem onClick={handleCloseNavMenu}>Cold calling</ListItem>
-                                    <ListItem onClick={handleCloseNavMenu}>Social media management</ListItem>
-                                    <ListItem onClick={handleCloseNavMenu}>Administration assistance</ListItem>
-                                    <ListItem onClick={handleCloseNavMenu}>Customer support assistant</ListItem>
-                                    <ListItem onClick={handleCloseNavMenu}>Business assistance</ListItem>
-                                    <ListItem onClick={handleCloseNavMenu}>Architecture assistance </ListItem>
-                                    <ListItem onClick={handleCloseNavMenu}>Web development</ListItem>
-                                    <ListItem onClick={handleCloseNavMenu}>Book keeping</ListItem>
-                                    <ListItem onClick={handleCloseNavMenu}>IT staffing</ListItem>
-                                </List>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Typography textAlign="center">Services</Typography>
                             </MenuItem>
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Typography textAlign="center">Refund Policy</Typography>

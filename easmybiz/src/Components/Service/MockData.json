@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "heading": "Tres-Zap",
+        "image": "/296742.svg",
+        "paragraph": "25793 Thierer Drive"
+    },
+    {
+        "id": 2,
+        "heading": "Bytecard",
+        "image": "/296742.svg",
+        "paragraph": "2 Cody Terrace"
+    },
+    {
+        "id": 3,
+        "heading": "Rank",
+        "image": "/296742.svg",
+        "paragraph": "928 Canary Plaza"
+    },
+    {
+        "id": 4,
+        "heading": "Stringtough",
+        "image": "/296742.svg",
+        "paragraph": "4949 Vidon Lane"
+    },
+    {
+        "id": 5,
+        "heading": "Voltsillam",
+        "image": "/296742.svg",
+        "paragraph": "4699 Crest Line Alley"
+    },
+    {
+        "id": 6,
+        "heading": "Tresom",
+        "image": "/296742.svg",
+        "paragraph": "62 Northwestern Road"
+    }
+]

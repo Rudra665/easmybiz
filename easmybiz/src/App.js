@@ -1,7 +1,8 @@
 import * as React from "react";
 import Search from "./Components/Search/Search";
 import NavBar from "./Components/navbar/NavBar";
-import HomePage from "./pAGES/HomePage/HomePage";
+import HomePage from "./Pages/HomePage/HomePage";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -10,7 +11,12 @@ function App() {
         <Search />
         <NavBar />
       </div>
-      <HomePage />
+      <div>
+        <HomePage />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </>
   );
 }
