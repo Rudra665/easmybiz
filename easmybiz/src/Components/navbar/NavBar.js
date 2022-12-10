@@ -1,4 +1,4 @@
-
+import Logo2 from '../../Assets/images/Logo2.png'
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -35,29 +35,15 @@ const NavBar = () => {
     };
 
     return (
-        <AppBar className='appbar' sx={{ top: 40, position: "absolute" }}>
+        <AppBar className='appbar' sx={{ top: 0, position: "absolute", backgroundColor:"black", height:"10vh" }}>
             <Container maxWidth="lg">
-                <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
+                <Toolbar disableGutters >
+                   
+                   <Box position="absolute">
+                        <img width="100vh" src={Logo2}/>
+                        </Box>
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },   }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -84,106 +70,74 @@ const NavBar = () => {
                             onClose={handleCloseNavMenu}
                             sx={{
                                 display: { xs: 'block', md: 'none' },
+                                
                             }}
                         >
 
-                            <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">Home</Typography>
+                            <MenuItem onClick={handleCloseNavMenu} sx={{'& :hover':{borderBottom:"1px solid red"}}}>
+                                <Typography textAlign="center"    >Home</Typography>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">About Us</Typography>
+                            <MenuItem onClick={handleCloseNavMenu} sx={{'& :hover':{borderBottom:"1px solid red"}}}>
+                                <Typography textAlign="center"   >About Us</Typography>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">Services</Typography>
+                            <MenuItem onClick={handleCloseNavMenu} sx={{'& :hover':{borderBottom:"1px solid red"}}}>
+                                <Typography textAlign="center"   >Services</Typography>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">Refund Policy</Typography>
+                            <MenuItem onClick={handleCloseNavMenu} sx={{'& :hover':{borderBottom:"1px solid red"}}}>
+                                <Typography textAlign="center"   >Refund Policy</Typography>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">Contact Us</Typography>
+                            <MenuItem onClick={handleCloseNavMenu} sx={{'& :hover':{borderBottom:"1px solid red"}}}>
+                                <Typography textAlign="center"   >Contact Us</Typography>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">Clients</Typography>
+                            <MenuItem onClick={handleCloseNavMenu} sx={{'& :hover':{borderBottom:"1px solid red"}}}>
+                                <Typography textAlign="center"   >Clients</Typography>
                             </MenuItem>
 
                         </Menu>
                     </Box>
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href=""
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', lg:"flex", xl:"flex" },justifyContent:"center", alignItems:"center" }}>
 
                         <Button
-
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 2, color: 'white','& :hover':{borderBottom:"2px solid red"}}}
                         >
-                            Home
+                            <Typography variant="p">Home</Typography>
+                        </Button>
+                        <Button
+                            onClick={handleCloseNavMenu}
+                            sx={{ my: 2, color: 'white', '& :hover':{borderBottom:"2px solid Red"}}}
+                        >
+                            <Typography variant="p">About Us</Typography>
+                        </Button>
+                        <Button
+                            onClick={handleCloseNavMenu}
+                            sx={{ my: 2, color: 'white', '& :hover':{borderBottom:"2px solid Red"}}}
+                        >
+                            <Typography variant="p">Services</Typography>
                         </Button>
                         <Button
 
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 2, color: 'white', '& :hover':{borderBottom:"2px solid Red"}}}
                         >
-                            About Us
+                            <Typography variant="p">Refund Policy</Typography>
                         </Button>
                         <Button
 
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 2, color: 'white', '& :hover':{borderBottom:"2px solid Red"}}}
                         >
-                            Services
+                            <Typography variant="p">Contact Us</Typography>
                         </Button>
                         <Button
 
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 2, color: 'white', '& :hover':{borderBottom:"2px solid Red"}}}
                         >
-                            Refund Policy
+                            <Typography variant="p">Clients</Typography>
                         </Button>
-                        <Button
-
-                            onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            Contact Us
-                        </Button>
-                        <Button
-
-                            onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            Clients
-                        </Button>
-                        <Menu
-                            id="fade-menu"
-                            MenuListProps={{
-                                'aria-labelledby': 'fade-button',
-                            }}
-                            anchorEl={anchorEl}
-                            open={open}
-                            onClose={handleClose}
-                            TransitionComponent={Fade}
-                        >
-                            <MenuItem onClick={handleClose}>Profile</MenuItem>
-                            <MenuItem onClick={handleClose}>My account</MenuItem>
-                            <MenuItem onClick={handleClose}>Logout</MenuItem>
-                        </Menu>
+                        
                     </Box>
                 </Toolbar>
             </Container >
