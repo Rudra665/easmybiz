@@ -1,3 +1,29 @@
+
+ /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000a25;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(95, 0, 0);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 0, 0); 
+}
+
+.Container::-webkit-scrollbar{
+  display: none;
+}
+
 .redBottom{
     border:none;
     position: relative;
