@@ -49,3 +49,29 @@
   .redBottom:active{
     border-bottom: 2px solid red;
   }
+  .carousel-indicators{
+    right: 0 !important;
+    bottom:0 !important;
+    left: 60% !important;
+ 
+  }
+  
+  .carousel-indicators [data-bs-target]{
+    box-sizing: content-box !important;
+border-radius: 50%;
+    flex: 0 1 auto !important;
+    width: 15px !important;
+    height: 15px !important;
+    padding: 0 !important;
+    /* margin-right: 3px !important;
+    margin-left: 3px !important; */
+    text-indent: -999px !important;
+    cursor: pointer !important;
+    background-color: red !important;
+    background-clip: padding-box !important;
+    border: 0 !important;
+    /* border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; */
+    /* opacity: .8 !important; */
+    transition: opacity .6s ease !important;
+  }

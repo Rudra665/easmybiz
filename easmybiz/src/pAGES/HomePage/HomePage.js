@@ -2,10 +2,12 @@ import { Box, Button, IconButton, Typography } from '@mui/material';
 import React from 'react'
 import Card from '../../Components/card/Card';
 import { useRef, useState } from 'react';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import Carousal from '../../Components/carousalSlider/Carousal';
 import { Container } from '@mui/system';
+import DatePicker from "../../Components/DatePicker/DatePicker"
+import LocationPicker from '../../Components/LocationPicker/LocationPicker';
  const Homepage=()=> {
     const [arrowDisable, setArrowDisable] = useState(true);
   const handleHorizantalScroll = (element, speed, distance, step) => {
@@ -29,22 +31,36 @@ import { Container } from '@mui/system';
   const elementRef = useRef(null);
     return (
     <>
-        <Box width="100%" >
+        <Box width="100%" sx={{position:"relative"}}>
         <Carousal/>
+        <Box sx={{position:"absolute", left:0,bottom:75,height:"6vh",zIndex:"100",alignItems:"end", display:"flex", borderRadius:"30px 30px 0px 0px", width:"35%", justifyContent:"center"}}>
+          <Button variant="contained" sx={{width:"50%", height:"6vh",borderRadius:"30px 0px 0px 0px"}} color="error">
+            Booking
+          </Button>
+          <Button variant="contained" sx={{width:"50%", height:"6vh",borderRadius:"0px 30px 0px 0px"}} color="error">
+            Experiences
+          </Button>
         </Box>
+        <Box sx={{position:"absolute", left:0,bottom:0,height:"10vh",backgroundColor:"#028d63",zIndex:"100",alignItems:"end", display:"flex", borderRadius:"0px 30px 0px 0px", width:"55%", justifyContent:"center"}}>
+          <LocationPicker/>
+          <DatePicker label={"Check In"}/>
+          <DatePicker label={"Check Out"}/>
+        </Box>
+        </Box>
+        <Box sx={{backgroundColor:"black", height:"60vh", display:"flex", alignItems:"center", padding:"3vh"}}>
+       
         <Box width="100%" my="3vh" sx={{display:"grid", justifyContent:"center"}}>
-            <Typography align="center" variant="h4" sx={{color:"#028d63", fontWeight:"700"}}>Destination</Typography>
+            <Typography align="center" variant="h4" sx={{color:"red", fontWeight:"700", margin:"5vh"}}>Destination</Typography>
            <Container maxWidth="md">
            <Box display="flex" alignItems="center">
            <Box>
            <IconButton
-           sx={{backgroundColor:"#313131"}}
-           align="center"
+           
           onClick={() => {
             handleHorizantalScroll(elementRef.current, 15, 210, -15);
           }}
         >
-          <ArrowBackIosIcon sx={{'& :hover':{color:"red"}}}/>
+          <ArrowCircleLeftIcon fontSize="large" sx={{color:"red", '& :hover':{color:"white"}}}/>
         </IconButton></Box>
            <Box className='Container' ref={elementRef} sx={{display:"flex",width:"100%",overflow:"scroll", transition:"all ease-in-out .3s" }}>
            <Card/>
@@ -56,23 +72,54 @@ import { Container } from '@mui/system';
            </Box>
            <Box>
            <IconButton
-           backgroundColor="black"
+           
           onClick={() => {
             handleHorizantalScroll(elementRef.current, 15, 210, 15);
           }}
         >
-          <ArrowForwardIosIcon sx={{'& :hover':{color:"red"}}}/>
+          <ArrowCircleRightIcon fontSize="large" sx={{color:"red", '& :hover':{color:"white"}}}/>
+        </IconButton>
+        </Box>
+        </Box>
+           </Container>
+        </Box>
+        </Box>
+         
+        <Box width="100%" my="5vh" sx={{display:"grid", justifyContent:"center"}}>
+            <Typography align="center" variant="h4" sx={{color:"#028d63", fontWeight:"700", margin:"3vh"}}>Destination</Typography>
+           <Container maxWidth="md">
+           <Box display="flex" alignItems="center">
+           <Box>
+           <IconButton
+           
+          onClick={() => {
+            handleHorizantalScroll(elementRef.current, 15, 210, -15);
+          }}
+        >
+          <ArrowCircleLeftIcon fontSize="large" sx={{color:"black", '& :hover':{color:"red"}}}/>
+        </IconButton></Box>
+           <Box className='Container' ref={elementRef} sx={{display:"flex",width:"100%",overflow:"scroll", transition:"all ease-in-out .3s" }}>
+           <Card/>
+           <Card/>
+           <Card/>
+           <Card/>
+           <Card/>
+           <Card/>
+           </Box>
+           <Box>
+           <IconButton
+           
+          onClick={() => {
+            handleHorizantalScroll(elementRef.current, 15, 210, 15);
+          }}
+        >
+          <ArrowCircleRightIcon fontSize="large" sx={{color:"Black", '& :hover':{color:"red"}}}/>
         </IconButton>
         </Box>
         </Box>
            </Container>
         </Box>
         
-        <Box sx={{backgroundColor:"black", height:"60vh"}}>
-
-
-
-        </Box>
 </>
     );
 }
