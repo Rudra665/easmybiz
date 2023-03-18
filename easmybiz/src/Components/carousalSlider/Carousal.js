@@ -1,8 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import c3 from "../../Assets/images/c3.jpg"
-import c1 from "../../Assets/images/c1.jpg"
+import c1 from "../../Assets/images/c1.jpeg"
 import c2 from "../../Assets/images/c2.jpg"
-import Box  from '@mui/material/Box';
 function Carousal() {
   return (
     <Carousel slide>

@@ -1,5 +1,3 @@
-// import * as React from 'react';
-// import TextField from '@mui/material/TextField';
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -10,7 +8,7 @@ export default function LocationPicker() {
       disablePortal
       id="combo-box-demo"
       options={Location}
-      sx={{ width: 300,marginInline:"2vh" }}
+      sx={{ width: 300, marginInline:"2vh"}}
       renderInput={(params) => <TextField {...params}  label={<LocationOnSharpIcon/>} />}
     />
   );

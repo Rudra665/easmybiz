@@ -1,7 +1,8 @@
 import * as React from "react";
 import Footer from './Components/Footer/Footer'
 import NavBar from './Components/navbar/NavBar';
-import HomePage from "./pages/homepage/Homepage"
+import HomePage from "./pAGES/HomePage/HomePage"
+import "./App.css"
 function App() {
   return (
     <>

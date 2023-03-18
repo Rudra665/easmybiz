@@ -2,12 +2,15 @@ import { Box, Button, Container, Grid, Link, Typography } from '@mui/material'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import logo2 from "../../Assets/images/Logo2.png"
+import logo2 from "../../Assets/images/logo2.png"
+import PreFooter from "../Footer/Pre-Footer"
+import PostFooter from "../Footer/PostFooter"
 import React from 'react'
 
 const Footer = () => {
-    return (
-        <Box sx={{ backgroundColor: "black", paddingBlock: 3, marginTop: 3, bottom:0, width:"100%" }}>
+    return (<>
+        <PreFooter/>
+        <Box sx={{ backgroundColor: "black", paddingBlock: 3, bottom:0, width:"100%" }}>
             <Container>
                 <Box justifyContent="space-between" width="100%" sx={{display:{xl:"flex", lg:"flex",md:"flex", sm:"flex", xs:"inline-block"},}} >   
                             <Box display="flow-root" justifyContent="center" width="100%" my="5vh">
@@ -44,18 +47,12 @@ const Footer = () => {
                             <Link sx={{ textDecoration: "none", color: "grey", cursor: "pointer", '& :hover': { color: "red" } }}><Typography sx={{ fontSize: "15px", marginBottom: "1vh" }}>Refund Policy</Typography></Link>
                             <Link sx={{ textDecoration: "none", color: "grey", cursor: "pointer", '& :hover': { color: "red" } }}><Typography sx={{ fontSize: "15px", marginBottom: "1vh" }}>Clients</Typography></Link>
                             </Box>
-                        
-                        {/* <Grid item lg="3" md="3" xs="12">
-                            <Typography color="white" marginBottom="2vh">Get In Touch</Typography>
-                            <Link sx={{ textDecoration: "none", color: "grey", cursor: "pointer", '& :hover': { color: "#90c404" } }}><FacebookOutlinedIcon /></Link>
-                            <Link sx={{ textDecoration: "none", color: "grey", cursor: "pointer", '& :hover': { color: "#90c404" } }}><InstagramIcon /></Link>
-                            <Link sx={{ textDecoration: "none", color: "grey", cursor: "pointer", '& :hover': { color: "#90c404" } }}><LinkedInIcon /></Link>
-                        </Grid> */}
-
-                 
                 </Box>
+                
             </Container >
         </Box >
+        <PostFooter/>
+        </>
     )
 }
 

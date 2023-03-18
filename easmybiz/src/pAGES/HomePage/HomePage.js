@@ -10,10 +10,8 @@ import DatePicker from "../../Components/DatePicker/DatePicker"
 import LocationPicker from '../../Components/LocationPicker/LocationPicker';
  const Homepage=()=> {
     const [arrowDisable, setArrowDisable] = useState(true);
+    const [isTrips, setIsTrips]=useState(false)
   const handleHorizantalScroll = (element, speed, distance, step) => {
-    
-  
-    
     let scrollAmount = 0;
     const slideTimer = setInterval(() => {
       element.scrollLeft += step;
@@ -33,22 +31,28 @@ import LocationPicker from '../../Components/LocationPicker/LocationPicker';
     <>
         <Box width="100%" sx={{position:"relative"}}>
         <Carousal/>
-        <Box sx={{position:"absolute", left:0,bottom:75,height:"6vh",zIndex:"100",alignItems:"end", display:"flex", borderRadius:"30px 30px 0px 0px", width:"35%", justifyContent:"center"}}>
-          <Button variant="contained" sx={{width:"50%", height:"6vh",borderRadius:"30px 0px 0px 0px"}} color="error">
+        <Box sx={{position:"absolute", left:0,bottom:65, height:"8vh", zIndex:"100",alignItems:"end", display:"flex", borderRadius:"30px 30px 0px 0px", width:"35%", justifyContent:"center"}}>
+          <Button onClick={()=>setIsTrips(false)} variant="contained" sx={{width:"50%", height:"6vh",borderRadius:"30px 0px 0px 0px"}} color="error">
             Booking
           </Button>
-          <Button variant="contained" sx={{width:"50%", height:"6vh",borderRadius:"0px 30px 0px 0px"}} color="error">
-            Experiences
+          <Button onClick={()=>setIsTrips(true)} variant="contained" sx={{width:"50%", height:"6vh",borderRadius:"0px 30px 0px 0px"}} color="error">
+            Trips
           </Button>
         </Box>
-        <Box sx={{position:"absolute", left:0,bottom:0,height:"10vh",backgroundColor:"#028d63",zIndex:"100",alignItems:"end", display:"flex", borderRadius:"0px 30px 0px 0px", width:"55%", justifyContent:"center"}}>
+        {!isTrips &&
+        <Box sx={{position:"absolute", left:0,bottom:0,height:"10vh",backgroundColor:"white",zIndex:"100",alignItems:"end", display:"flex", borderRadius:"0px 30px 0px 0px", width:"55%", justifyContent:"center"}}>
           <LocationPicker/>
           <DatePicker label={"Check In"}/>
           <DatePicker label={"Check Out"}/>
         </Box>
+ }
+        {isTrips &&
+         <Box  sx={{position:"absolute", left:0,bottom:0,height:"10vh",backgroundColor:"white",zIndex:"100",alignItems:"end", display:"flex", borderRadius:"0px 30px 0px 0px", width:"45%", justifyContent:"center"}}>
+          <LocationPicker/>
+        </Box> 
+      }
         </Box>
         <Box sx={{backgroundColor:"black", height:"60vh", display:"flex", alignItems:"center", padding:"3vh"}}>
-       
         <Box width="100%" my="3vh" sx={{display:"grid", justifyContent:"center"}}>
             <Typography align="center" variant="h4" sx={{color:"red", fontWeight:"700", margin:"5vh"}}>Destination</Typography>
            <Container maxWidth="md">
